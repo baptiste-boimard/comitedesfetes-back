@@ -1,4 +1,4 @@
--- Deploy rpgproject_sqitch:rpgproject_v1 to pg
+-- Deploy rpgproject_sqitch:1_create-DB to pg
 
 BEGIN;
 

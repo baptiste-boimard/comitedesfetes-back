@@ -3,7 +3,7 @@
 BEGIN;
 
 -- Create table user
-CREATE TABLE public."user" (
+CREATE TABLE public."admin" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "email" text NOT NULL UNIQUE,
   "password" text NOT NULL,

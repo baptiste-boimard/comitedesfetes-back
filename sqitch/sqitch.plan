@@ -4,3 +4,6 @@
 rpgproject_v1 2023-03-13T17:33:00Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create DB
 rpgproject_V2 2023-03-13T17:38:25Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create user table
 rpgproject_V3 2023-03-16T10:25:06Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create 2 users
+1_create-DB 2023-07-03T12:26:22Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create DB
+2_ajout_table_admin 2023-07-03T12:29:58Z baptiste,,, <baptiste@baptiste-VirtualBox> # Ajout de la table admin
+3_ajout_admins 2023-07-03T12:34:44Z baptiste,,, <baptiste@baptiste-VirtualBox> # Ajout de 2 admins pour le dev

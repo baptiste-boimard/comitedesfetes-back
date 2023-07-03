@@ -2,7 +2,7 @@
 
 BEGIN;
 
-INSERT INTO public."user"
+INSERT INTO public."admin"
     (email, password)
 	VALUES ('dd@dd', 'dd'), ('ff@ff', 'ff');
 
