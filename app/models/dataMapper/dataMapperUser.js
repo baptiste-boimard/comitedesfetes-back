@@ -10,7 +10,7 @@ const datamapper = {
    * */
   async getOneUser(email) {
     const query = {
-      text: `SELECT * FROM "user"
+      text: `SELECT * FROM "admin"
             WHERE email = $1`,
       values: [email],
     };
@@ -22,11 +22,11 @@ const datamapper = {
    * @method userSignup
    * @param {String} email 
    * @param {String} hashPassword 
-   * @returns {Boolean} insert is ok or
+   * @returns {Boolean} insert is ok or nok
    */
   async userSignup(email, hashPassword) {
     const query = {
-      text: `INSERT INTO "user"
+      text: `INSERT INTO "admin"
             (email, password)
             VALUES
             ($1, $2);`,

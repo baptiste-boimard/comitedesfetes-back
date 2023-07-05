@@ -6,3 +6,4 @@ dotenv => charge les variables d'environnemen dans un ficher .env
 pg => postgres 
 jsonwebtoken => envoi un token au front contenant des infos voulues
 joi => permet de créer des schema pour valider des objets, et les données    courantes
+firebase => herbergement Api et DB
