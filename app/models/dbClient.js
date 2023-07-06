@@ -18,9 +18,10 @@ const {Pool} = require('pg');
 
 //Local connection
 const client = new Pool({
-user: process.env.PG_USER,
-password: process.env.PG_PASSWORD,
-database: process.env.PG_DATABASE,
+connectionString: DATABASE_URL,
+// user: process.env.PG_USER,
+// password: process.env.PG_PASSWORD,
+// database: process.env.PG_DATABASE,
 });
 
 client.connect();
