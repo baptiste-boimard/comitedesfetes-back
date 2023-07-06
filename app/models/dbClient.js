@@ -12,7 +12,6 @@ const {Pool} = require('pg');
 //Remote connection
 const client = new Pool({
   connectionString: process.env.DATABASE_HEROKU_URL,
-
   ssl : {rejectUnauthorized: false, // Accept the fact that we aren't in SSL security
   },
 });
