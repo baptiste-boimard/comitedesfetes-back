@@ -1,7 +1,6 @@
 const express = require('express');
 
 const routerWrapper = require('../handlers/routerWrapper');
-
 const loginController = require('../controllers/loginController');
 const tinymceController = require('../controllers/tinymceController');
 

@@ -11,12 +11,12 @@ const debug = require('debug')('HANDLEERROR');
  * @param {Function} next
  */
 const handleError = async (error, req, res, next) => {
-  debug(error.message);
+  debug(error.message, error.status);  
   res.status(error.status || 500);
   res.send({
     error: {
-      status: error.status,
       message: error.message,
+      status: error.status,
     },
   });
 };
