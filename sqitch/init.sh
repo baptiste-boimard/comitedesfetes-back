@@ -1,10 +1,11 @@
 # 0. je prends l'identité de postgres
 export PGUSER=postgres
+export PGPASSWORD=postgres
 
-# 1. Création d'un utilisateur en BDD ocolis_admin (with login)
+# 1. Création d'un utilisateur en BDD (with login)
 createuser comitedesfetes --login --password
 
-# 2. Création d'une BDD ocolis dont le propriétaire est ocolis_admin
+# 2. Création d'une BDD avec un propriétaire
 createdb comitedesfetes --owner comitedesfetes
 
 # 3. Initialiser Sqitch

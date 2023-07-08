@@ -1,4 +1,4 @@
--- Deploy rpgproject_sqitch:6_ajout_des_tables to pg
+-- Deploy comitedesfetes_sqitch:2_Ajouttables to pg
 
 BEGIN;
 
@@ -6,15 +6,17 @@ CREATE TABLE public.admin
 (
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
     email text NOT NULL,
+    name text NOT NULL,
     password text NOT NULL,
     created_at timestamp with time zone DEFAULT now(),
     update_at timestamp with time zone,
-    CONSTRAINT id_admin PRIMARY KEY (id)
+    CONSTRAINT id_admin PRIMARY KEY (id),
+    CONSTRAINT email UNIQUE (email)
+    INCLUDE (email)
 );
 
 ALTER TABLE IF EXISTS public.admin
     OWNER to comitedesfetes;
-
 
 CREATE TABLE public.event
 (
@@ -63,8 +65,4 @@ CREATE TABLE public.slide
 
 ALTER TABLE IF EXISTS public.slide
     OWNER to comitedesfetes;
-
 COMMIT;
-
-
-

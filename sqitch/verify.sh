@@ -1,14 +1,7 @@
-export PGDATABASE=rpgproject
-export PGUSER=rpgproject
-export PGPASSWORD=rpgproject
+export PGDATABASE=comitedesfetes
+export PGUSER=comitedesfetes
+export PGPASSWORD=comitedesfetes
 
 # Verify version
 
-# v1
-# no verify
-
-# v2
-# sqitch verify rpgproject_V2
-
-# v2
-sqitch verify rpgproject_V3
+sqitch verify 2_Ajouttables

@@ -1,7 +1,7 @@
--- Verify rpgproject_sqitch:1_create-DB on pg
+-- Verify comitedesfetes_sqitch:1_create-DB on pg
 
 BEGIN;
 
--- No verify because no table existing
+-- XXX Add verifications here.
 
 ROLLBACK;

@@ -1,7 +1,7 @@
--- Revert rpgproject_sqitch:1_create-DB from pg
+-- Revert comitedesfetes_sqitch:1_create-DB from pg
 
 BEGIN;
 
--- Nothing DB cannot be drop !!
+-- XXX Add DDLs here.
 
 COMMIT;

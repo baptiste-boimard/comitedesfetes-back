@@ -1,14 +1,7 @@
-export PGDATABASE=rpgproject
-export PGUSER=rpgproject
-export PGPASSWORD=rpgproject
+export PGDATABASE=comitedesfetes
+export PGUSER=comitedesfetes
+export PGPASSWORD=comitedesfetes
 
 # Revert version
 
-# v1
-# No revert possible
-
-# V2
-# sqitch revert db:pg:rpgproject rpgproject_v1
-
-# V3
-sqitch revert db:pg:rpgproject rpgproject_V2
+sqitch revert db:pg:comitedesfetes 1_create-DB

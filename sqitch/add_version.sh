@@ -1,4 +1,1 @@
-# sqitch add rpgproject -n "création des tables"
-
-
-sqitch add 7_modif -n "Modif mineur sur les paramètres"
+sqitch add 2_Ajouttables -n "Ajout des tables de la BDD"

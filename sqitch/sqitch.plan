@@ -1,13 +1,5 @@
 %syntax-version=1.0.0
-%project=rpgproject_sqitch
+%project=comitedesfetes_sqitch
 
-rpgproject_v1 2023-03-13T17:33:00Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create DB
-rpgproject_V2 2023-03-13T17:38:25Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create user table
-rpgproject_V3 2023-03-16T10:25:06Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create 2 users
-1_create-DB 2023-07-03T12:26:22Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create DB
-2_ajout_table_admin 2023-07-03T12:29:58Z baptiste,,, <baptiste@baptiste-VirtualBox> # Ajout de la table admin
-3_ajout_admins 2023-07-03T12:34:44Z baptiste,,, <baptiste@baptiste-VirtualBox> # Ajout de 2 admins pour le dev
-3_ajout_table_event 2023-07-08T13:54:48Z baptiste,,, <baptiste@baptiste-VirtualBox> # Ajout de la table pour stocker les events
-5_drop_des_tables 2023-07-08T14:42:58Z baptiste,,, <baptiste@baptiste-VirtualBox> # Suprression des tables de la BD
-6_ajout_des_tables 2023-07-08T14:47:19Z baptiste,,, <baptiste@baptiste-VirtualBox> # Création de toutes les tables de BDD
-7_modif 2023-07-08T15:32:41Z baptiste,,, <baptiste@baptiste-VirtualBox> # Modif mineur sur les paramètres
+1_create-DB 2023-07-08T15:47:47Z baptiste,,, <baptiste@baptiste-VirtualBox> # Create DB
+2_Ajouttables 2023-07-08T15:56:11Z baptiste,,, <baptiste@baptiste-VirtualBox> # Ajout des tables de la BDD

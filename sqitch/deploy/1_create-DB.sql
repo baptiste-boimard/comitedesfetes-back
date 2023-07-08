@@ -1,7 +1,7 @@
--- Deploy rpgproject_sqitch:1_create-DB to pg
+-- Deploy comitedesfetes_sqitch:1_create-DB to pg
 
 BEGIN;
 
--- Nothing DB already exist but it's empty of tables
+-- XXX Add DDLs here.
 
 COMMIT;
