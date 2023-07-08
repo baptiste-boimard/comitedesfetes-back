@@ -24,13 +24,13 @@ const datamapper = {
    * @param {String} hashPassword 
    * @returns {Boolean} insert is ok or nok
    */
-  async userSignup(email, hashPassword) {
+  async userSignup(email, name, hashPassword) {
     const query = {
       text: `INSERT INTO "admin"
-            (email, password)
+            (email, name, password)
             VALUES
-            ($1, $2);`,
-      values: [email, hashPassword],
+            ($1, $2, $3);`,
+      values: [email, name, hashPassword],
     };
     const data = await client.query(query);
     return data.rowCount;

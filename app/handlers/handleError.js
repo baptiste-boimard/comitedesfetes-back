@@ -11,7 +11,7 @@ const debug = require('debug')('HANDLEERROR');
  * @param {Function} next
  */
 const handleError = async (error, req, res, next) => {
-  debug(error.message, error.status);  
+  debug(error.message);  
   res.status(error.status || 500);
   res.send({
     error: {

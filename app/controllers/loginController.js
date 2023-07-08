@@ -51,8 +51,8 @@ const loginController =  {
    * @returns {Object} Return response to signup
    */
   async signup(req,res,next) {
-
-    if(req.body.email ==='' || req.body.password ==='') {
+    console.log(req.body);
+    if(req.body.email ==='' || req.body.password ==='' || req.body.name ==='') {
       const err = new Error('Veuillez remplir tous les champs');
       err.status = 406;
       next(err);
@@ -64,6 +64,7 @@ const loginController =  {
     } else {
       const userSignup = await dataMapperUser.userSignup(
           req.body.email,
+          req.body.name,
           await bcrypt.hash(req.body.password, 10),
         );
       res 
