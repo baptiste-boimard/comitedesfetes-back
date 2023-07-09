@@ -20,8 +20,9 @@ ALTER TABLE IF EXISTS public.admin
 
 CREATE TABLE public.event
 (
-    id integer NOT NULL,
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
     title text NOT NULL,
+    summary text,
     date timestamp with time zone,
     attach text,
     content text,
@@ -39,7 +40,7 @@ ALTER TABLE IF EXISTS public.event
 
 CREATE TABLE public.member
 (
-    id integer NOT NULL,
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
     firstname text NOT NULL,
     lastname text NOT NULL,
     role text,
@@ -53,12 +54,12 @@ ALTER TABLE IF EXISTS public.member
 
 CREATE TABLE public.slide
 (
-    id integer NOT NULL,
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
     event_id integer,
     CONSTRAINT id_slide_pk PRIMARY KEY (id),
     CONSTRAINT event_id_fk FOREIGN KEY (event_id)
         REFERENCES public.event (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
+        ON UPDATE CASCADE
         ON DELETE CASCADE
         NOT VALID
 );

@@ -22,8 +22,11 @@ router.post(
 
 
 router.post('/login', routerWrapper(loginController.login));
+
 router.post('/tinymce', routerWrapper(tinymceController.upload));
 router.get('/tinymcedown', routerWrapper(tinymceController.download));
+
+router.post('/tinymcesave', routerWrapper(tinymceController.save));
 
 
 module.exports = router;
