@@ -1,3 +1,4 @@
 const dataMapperUser = require('./dataMapperUser');
+const dataMapperArticle = require('./dataMapperArticle');
 
-module.exports = {dataMapperUser};
+module.exports = {dataMapperUser, dataMapperArticle};

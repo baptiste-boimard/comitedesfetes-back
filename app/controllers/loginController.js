@@ -1,7 +1,7 @@
 require('dotenv').config();
 const bcrypt = require('bcrypt');
 const jwt = require(`jsonwebtoken`);
-const {dataMapperUser} = require('../models/dataMapper');
+const { dataMapperUser } = require('../models/dataMapper');
 
 
 /**
@@ -51,7 +51,6 @@ const loginController =  {
    * @returns {Object} Return response to signup
    */
   async signup(req,res,next) {
-    console.log(req.body);
     if(req.body.email ==='' || req.body.password ==='' || req.body.name ==='') {
       const err = new Error('Veuillez remplir tous les champs');
       err.status = 406;

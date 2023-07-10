@@ -1,6 +1,7 @@
 const {google} = require('googleapis');
 const fs = require('fs')
 const axios = require ('axios');
+const { dataMapperArticle } = require('../models/dataMapper');
 
 
 const CLIENT_ID = '510042688421-1u8m29imkhtflquik2v6g9lf576kfn61.apps.googleusercontent.com';
@@ -27,6 +28,36 @@ const tinymceController = {
 
   // modif sur les limite des proprietes urlencoded et json du bodyparser faite
   // faut les recupérer
+
+
+  /**
+   * La méthode permer d'enrengistrer son article
+   * @memberof tinymceController
+   * @method save
+   * @param {Object} req.body 
+   * @param {Object} routers 
+   * @returns {Object} Sauvegarde OK
+   */
+  async save(req, res, next) {
+    console.log(req.body);
+    if(req.body.title === '' || req.body.date === '') {
+      const err = new Error('Un titre et une date sont obligatoire pour sauvegarder votre article');
+      err.status = 406;
+      next(err);
+    }
+    const articleSaved = await dataMapperArticle.saveArticle(
+      req.body.title,
+      req.body.summary,
+      req.body.date,
+      req.body.attach,
+      req.body.userId,
+    );
+    res.status(200).send('Votre article a été sauvegardé avec succès');
+    if(!articleSaved) {
+      const err = new Error('La sauvegarde de votre article a rencontré un problème, veuillez recommencer');
+      next(err);
+    }
+  },
 
 
   async upload(req, res, next) {
@@ -109,24 +140,24 @@ const tinymceController = {
 module.exports = tinymceController;
 
 
-async function generatePublicUrl() {
-  try {
-    const fileId ='1T1EMHOa-koYRgcilLSGFY-7aIcSmQ5RI';
-    await drive.permissions.create({
-      fileId: fileId,
-      requestBody: {
-        role: 'reader',
-        type:'anyone',
-      }
-    });
+// async function generatePublicUrl() {
+//   try {
+//     const fileId ='1T1EMHOa-koYRgcilLSGFY-7aIcSmQ5RI';
+//     await drive.permissions.create({
+//       fileId: fileId,
+//       requestBody: {
+//         role: 'reader',
+//         type:'anyone',
+//       }
+//     });
 
-    const result = await drive.files.get({
-      fileId: fileId,
-      fields: 'webViewLink, webContentLink',
-    });
+//     const result = await drive.files.get({
+//       fileId: fileId,
+//       fields: 'webViewLink, webContentLink',
+//     });
     
-    console.log(result.data);
-  } catch (error) {
-  }
+//     console.log(result.data);
+//   } catch (error) {
+//   }
   
-};
+// };
